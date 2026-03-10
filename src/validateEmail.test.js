@@ -7,13 +7,10 @@ describe(`Function 'validateEmail':`, () => {
     expect(validateEmail).toBeInstanceOf(Function);
   });
 
-  it(`should return boolean`, () => {
-
-  });
+  it(`should return boolean`, () => {});
 
   it(`should return 'true' for the valid email`, () => {
-    expect(validateEmail('test838@gmail.com.'))
-      .toBeTruthy();
+    expect(validateEmail('test838@gmail.com.')).toBeTruthy();
   });
 
   // write more tests here
