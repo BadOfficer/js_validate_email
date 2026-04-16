@@ -12,7 +12,11 @@ describe(`Function 'validateEmail':`, () => {
   });
 
   it(`should return 'true' for the valid email`, () => {
-    expect(validateEmail('test838@gmail.com.')).toBeTruthy();
+    expect(validateEmail('test838@gmail.com')).toBeTruthy();
+  });
+
+  it(`should return 'false' for the invalid email`, () => {
+    expect(validateEmail('testemail.com')).toBeFalsy();
   });
 
   it(`should return 'true' for the 'test@mail.com'`, () => {
@@ -45,5 +49,9 @@ describe(`Function 'validateEmail':`, () => {
 
   it(`should return 'false' for special symbol`, () => {
     expect(validateEmail('t!est@example.com')).toBeFalsy();
+  });
+
+  it(`should return 'false' for email, domain starts with .`, () => {
+    expect(validateEmail('test@.example.com')).toBeFalsy();
   });
 });
