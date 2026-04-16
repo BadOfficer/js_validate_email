@@ -23,7 +23,7 @@ describe(`Function 'validateEmail':`, () => {
     expect(validateEmail('test@mail.com')).toBeTruthy();
   });
 
-  it(`should return 'false' for the 'false@email`, () => {
+  it(`should return 'false' for the 'false@email'`, () => {
     expect(validateEmail('false@email')).toBeFalsy();
   });
 
